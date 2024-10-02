@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "624405097246",
+    "project_id": "senbank-66222",
+    "storage_bucket": "senbank-66222.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:624405097246:android:40d3ce6565872de508f70f",
+        "android_client_info": {
+          "package_name": "com.example.senbank"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGJswIn9za9sfqsWl3WfwqAfb_qrQtrUQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
