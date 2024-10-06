@@ -50,7 +50,6 @@ class _HomePageState extends State<HomePage> {
                 //transactionServices.withdraw(customer, 500);
                 transactionServices.transfer(customer, customer1, 500);
                 print(customer.getAccount()!.getAmount());
-
                 //transactionServices.transfer(customer, customer1, 100);
                 Navigator.pop(context);
               },

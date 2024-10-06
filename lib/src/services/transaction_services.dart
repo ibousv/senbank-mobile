@@ -52,11 +52,17 @@ class TransactionServices {
     double fee = transactionFee(from, amount);
     Transaction tx = Transaction(
         from, to, TransactionType.send.toString(), amount, DateTime.now());
-    withdraw(from, amount);
-    deposit(to, amount - fee);
+    Transaction tx2 = Transaction(from, to, TransactionType.receive.toString(),
+        amount - fee, DateTime.now());
     from.addTransaction(tx);
+    to.addTransaction(tx2);
+    from
+        .getAccount()!
+        .setAmount(from.getAccount()!.getAmount()! - (amount - fee));
+    to.getAccount()!.setAmount(to.getAccount()!.getAmount()! + amount);
     return accountService
         .updateAccount(from)
-        .then((value) => print("transfer with success"));
+        .then((value) => print("transfer with success"))
+        .then((value) => accountService.updateAccount(to));
   }
 }
